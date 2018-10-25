@@ -1,0 +1,226 @@
+{
+    "Top": {
+      "style": [
+        "blouse",
+        "front button down",
+        "tank",
+        "tee",
+        "NA"
+      ],
+      "neck": [
+        "boat neck",
+        "round neck",
+        "mock neck",
+        "scoop neck",
+        "sweetheart",
+        "v neck",
+        "one shoulder",
+        "off shoulder",
+        "strapless",
+        "plunge",
+        "not visible",
+        "split neck",
+        "NA"
+      ],
+      "sleeve": [
+        "cap",
+        "elbow",
+        "long",
+        "short",
+        "sleeveless",
+        "three-quater",
+        "halter",
+        "sweetheart",
+        "not visible",
+        "NA"
+      ],
+      "length": [
+        "crop",
+        "mid",
+        "tunic",
+        "NA"
+      ],
+      "pattern": [
+        "abstract",
+        "floral",
+        "horizontal_stripes",
+        "plaid",
+        "text_and_logos",
+        "camouflage",
+        "gingham",
+        "leopard",
+        "polka_dots",
+        "tribal",
+        "chevron",
+        "graphic",
+        "not_visible",
+        "solids",
+        "vertical_stripes",
+        "NA"
+      ],
+      "detail": [
+        "distressed",
+        "embroidered",
+        "lace",
+        "plain",
+        "ruffle",
+        "NA"
+      ],
+      "material": [
+        "chiffon",
+        "cotton",
+        "denim",
+        "glitter",
+        "leather",
+        "linen",
+        "satin",
+        "velvet",
+        "wool",
+        "not sure",
+        "NA"
+      ]
+    },
+    "Bottom": {
+      "type": [
+        "Skirt",
+        "Shorts",
+        "Pants"
+      ]
+    },
+    "Shorts": {
+      "length": [
+        "short",
+        "mid",
+        "long",
+        "NA"
+      ],
+      "detail": [
+        "distressed",
+        "embroidered",
+        "not visible",
+        "plain",
+        "pleated",
+        "NA"
+      ],
+      "pattern": [
+        "checks",
+        "printed",
+        "solids",
+        "stipes",
+        "textlogos",
+        "NA"
+      ],
+      "material": [
+        "cotton",
+        "denim",
+        "leather",
+        "satin",
+        "not sure",
+        "NA"
+      ]
+    },
+    "Skirt": {
+      "length": [
+      "knee",
+      "maxi",
+      "mini",
+      "short",
+      "three quarter",
+      "NA"
+      ],
+      "skirt_type": [
+      "flared",
+      "pencil",
+      "straight",
+      "NA"
+      ],
+      "detail": [
+      "distressed",
+      "embroidered",
+      "not visible",
+      "plain",
+      "pleat",
+      "ruffle",
+      "NA"
+      ],
+      "pattern": [
+      "abstract",
+      "floral",
+      "horizontal_stripes",
+      "plaid",
+      "text_and_logos",
+      "camouflage",
+      "gingham",
+      "leopard",
+      "polka_dots",
+      "tribal",
+      "chevron",
+      "graphic",
+      "not_visible",
+      "solids",
+      "vertical_stripes",
+      "NA"
+      ],
+      "material": [
+      "chiffon",
+      "cotton",
+      "denim",
+      "glitter",
+      "lace",
+      "leather",
+      "linen",
+      "satin",
+      "velvet",
+      "wool",
+      "not sure",
+      "NA"
+      ]
+    },
+    "Pants": {
+        "ankle": [
+        "wide leg",
+        "bootcup",
+        "tapered",
+        "cigerate",
+        "not visible",
+        "NA"
+        ],
+        "fit": [
+        "straight",
+        "skinny",
+        "loose",
+        "pallazo",
+        "NA"
+        ],
+        "length": [
+        "ankle",
+        "crop",
+        "full",
+        "NA"
+        ],
+        "detail": [
+        "distressed",
+        "embroidered",
+        "plain",
+        "pleated",
+        "NA"
+        ],
+        "pattern": [
+        "checks",
+        "printed",
+        "solids",
+        "stipes",
+        "camouflage",
+        "NA"
+        ],
+        "material": [
+        "cotton",
+        "denim",
+        "leather",
+        "satin",
+        "not sure",
+        "NA"
+        ]
+    }
+    
+  }
