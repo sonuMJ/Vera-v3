@@ -7,3 +7,14 @@
     color: white;
     background-color: #dc3545;
 }
+.inactive-tab{
+    pointer-events: none;
+    cursor: default;
+    color:#848484;
+}
+.color_sq{
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid black;
+}

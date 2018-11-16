@@ -241,7 +241,7 @@ class Tag extends React.Component{
                             }
                         </div>
                         <div className="col-lg-6">
-                            <TagContent dresstype={this.state.dress_pos} submi={this.props.submitmethod}  imguritop={t_crop} imguribottom={b_crop} selectedtab={this.state.selectedTab} bottomtype_sel={this.onBottomTypeSelect.bind(this)} currentselect={this.state.currentSelected_arr} pre_selected={this.state.pre_Selected} selectedcategory={this.state.selectedCatogory} selectedtype={this.state.selectedType}/>
+                            <TagContent dresstype={this.state.dress_pos} topdata={this.state.Top_pre} bottomdata={this.state.Bottom_pre} submi={this.props.submitmethod}  imguritop={t_crop} imguribottom={b_crop} selectedtab={this.state.selectedTab} bottomtype_sel={this.onBottomTypeSelect.bind(this)} currentselect={this.state.currentSelected_arr} pre_selected={this.state.pre_Selected} selectedcategory={this.state.selectedCatogory} selectedtype={this.state.selectedType}/>
                         </div>
                     </div>
                     <div className="col-lg-6">

@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import './style.css';
 import Review from './Review';
+import Color from './Color';
 
 const Pre_load = (dressType) => {
     var _arr = [];
@@ -51,6 +52,7 @@ class TagContent extends React.Component{
         //console.log($(".nav-tabs li:first-child").addClass("active"));
         
         $(".nav-tabs li:first-child").addClass("active");
+        $(".nav-tabs li:first-child").find("a").removeClass("inactive-tab");
     }
 
     componentWillReceiveProps(){
@@ -360,27 +362,52 @@ class TagContent extends React.Component{
         )
     }
 
+    getLABColors(type){
+        var c ;
+        if(type === "top"){
+            Object.keys(this.props.topdata).map(i => {
+                 Object.keys(this.props.topdata[i]).map(items=> {
+                   if(items === "colors"){
+                        c = this.props.topdata[i][items];
+                   }
+                 })
+            })
+        }else if(type === "bottom"){
+            Object.keys(this.props.bottomdata).map(i => {
+                Object.keys(this.props.bottomdata[i]).map(items=> {
+                  if(items === "colors"){
+                       c = this.props.bottomdata[i][items];
+                  }
+                })
+           })
+        }
+        return c;
+    }
+
 
 
     showContent(){
+        var topColor = this.getLABColors("top");
+        var bottomColor = this.getLABColors("bottom");
         switch(this.props.selectedtab){
             case 'Validity' :
-                return (<React.Fragment><h1>Validity</h1>
+                return (
+                <React.Fragment><h1>Validity</h1>
                     <img src={this.props.imguritop}/><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <img src={this.props.imguribottom}/><br/>
-                    <button className="btn btn-danger-outline">Inappropriate</button>&nbsp;
-                    <button className="btn btn-danger-outline">Swimwear</button>&nbsp;
-                    <button className="btn btn-danger-outline">Sleepwear</button>&nbsp;
-                    <button className="btn btn-danger-outline">Propduct</button>&nbsp;
-                    <button className="btn btn-danger-outline">Logo</button>&nbsp;
-                    <button className="btn btn-danger-outline">Notwomen</button>
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Inappropriate</button>&nbsp;
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Swimwear</button>&nbsp;
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Sleepwear</button>&nbsp;
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Propduct</button>&nbsp;
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Logo</button>&nbsp;
+                    <button className="btn btn-danger-outline" onClick={this.validityConfirm.bind()}>Notwomen</button>
                     <button className="btn btn-success btn-block" onClick={this.nextTab.bind(this)}>Valid</button>
                     </React.Fragment>)
                 
                 break;
             case 'Color':
-                return(<React.Fragment><h1>Color</h1>
-                    <button className="btn btn-success btn-block" onClick={this.nextTab.bind(this)}>Confirm</button></React.Fragment>)
+                return(<React.Fragment><Color imgtop={this.props.imguritop} topcolor={topColor} bottomcolor={bottomColor
+                } imgbottom={this.props.imguribottom} next={this.nextTab.bind(this)}/></React.Fragment>)
                 break;
             case 'Review':
                 return(<div>
@@ -401,6 +428,17 @@ class TagContent extends React.Component{
                     </React.Fragment>
                 )
         }
+    }
+
+    validityConfirm(e){
+        var type = e.target.innerHTML;
+        var validate = window.confirm("Are you sure you want to flag this image as : "+ type.toLowerCase() );
+        if(validate){
+            //confirm
+        }else{
+            
+        }
+        e.preventDefault();
     }
 
     render(){
@@ -454,24 +492,12 @@ class TagContent extends React.Component{
         //     this.deleteBottomItem();
         // }
 
-        
+        //remove inactive class 
+        $(".nav-tabs > .active").next("li").find("a").removeClass("inactive-tab");
+
+        //make click event in tab
         $(".nav-tabs > .active").next("li").find("a")[0].click();
         //console.log( $(".nav-tabs > .active").next("li"));
-    }
-    deleteBottomItem(){
-        console.log("delete executed!!!");
-        var list = this.state.selectedList;
-
-        for(var i = 0;i < list.length;i++){
-            if (list[i].category == "Pants"||list[i].category == "Shorts"||list[i] == "Shirt"){
-                //console.log(this.state.selectedList[i]);
-                list.splice(i,1);
-            }
-        }
-        console.log(list);
-        this.setState({
-            selectedList : list
-        })
     }
 }
 
